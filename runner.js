@@ -9,6 +9,7 @@ var num1 = 1001;
 var num2 = 123882498;
 var num3 = 7823287;
 var num4 = 1233;
+var num5 = -1234321;
 
 
 var isPalindrome = function(x) {
@@ -19,6 +20,11 @@ var isPalindrome = function(x) {
   // if there is ever not a match, number is not a palindrome
 
   var digitArray = x.toString().split("");
+
+  if (digitArray[0] === "-") {
+    return false;
+  }
+
   var digitStack = [];
   var halfwayPoint = Math.floor(digitArray.length / 2);
 
@@ -50,3 +56,4 @@ console.log(isPalindrome(num1));
 console.log(isPalindrome(num2));
 console.log(isPalindrome(num3));
 console.log(isPalindrome(num4));
+console.log(isPalindrome(num5));
